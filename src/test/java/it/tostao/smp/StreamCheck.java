@@ -2,8 +2,8 @@ package it.tostao.smp;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -14,7 +14,7 @@ public class StreamCheck {
 
     @Test
     public void checkIt(){
-        LinkedList<User> users = new LinkedList<>();
+        List<User> users = new ArrayList<>();
         users.add(new User(1, "User","nickname", 1.5f, 1.5f));
         users.add(new User(1, "User","nickname", 1.5f, 1.2f));
         users.add(new User(1, "User","nickname", 1.5f, 1f));
@@ -34,7 +34,8 @@ public class StreamCheck {
         Comparator<User> byNickname = Comparator.comparing(user -> user.getNickname());
         Comparator<User> bySizeDifferent = Comparator.comparing(user -> user.getPercentage());
 
-        List<User> sortedUsers = users.stream().sorted(byName.thenComparing(byId).thenComparing(byNickname).thenComparing(bySizeDifferent)).collect(
+        List<User> sortedUsers = users.stream().sorted(
+                byName.thenComparing(byId).thenComparing(byNickname).thenComparing(bySizeDifferent)).collect(
                 Collectors.toList());
         users.stream().sorted(byName.thenComparing(byId)).forEach(System.out::println);
 
