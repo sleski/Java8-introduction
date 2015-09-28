@@ -20,24 +20,24 @@ public class StreamCheck {
         users.add(new User(1, "User","nickname", 1.5f, 1f));
         users.add(new User(1, "User","nickname", 1.5f, 1.6f));
         users.add(new User(1, "User","nickname", 1.5f, 1.3f));
-        int uid = 4;
-        List<User> filteredUsers =users.stream().filter((user) -> user.getId() == uid).limit(2).collect(
-                Collectors.toList());
-        if(filteredUsers.size() > 0){
-            System.out.println(filteredUsers.get(0).toString());
-        }else{
-            System.out.println("no element on list");
-        }
+//        int uid = 4;
+//        List<User> filteredUsers =users.stream().filter((user) -> user.getId() == uid).limit(2).collect(
+//                Collectors.toList());
+//        if(filteredUsers.size() > 0){
+//            System.out.println(filteredUsers.get(0).toString());
+//        }else{
+//            System.out.println("no element on list");
+//        }
 
         Comparator<User> byName = Comparator.comparing(user -> user.getUsername());
         Comparator<User> byId = Comparator.comparing(user -> user.getId());
         Comparator<User> byNickname = Comparator.comparing(user -> user.getNickname());
         Comparator<User> bySizeDifferent = Comparator.comparing(user -> user.getPercentage());
 
-        List<User> sortedUsers = users.stream().sorted(
-                byName.thenComparing(byId).thenComparing(byNickname).thenComparing(bySizeDifferent)).collect(
-                Collectors.toList());
-        users.stream().sorted(byName.thenComparing(byId)).forEach(System.out::println);
+//        List<User> sortedUsers = users.stream().sorted(
+//                byName.thenComparing(byId).thenComparing(byNickname).thenComparing(bySizeDifferent)).collect(
+//                Collectors.toList());
+        users.stream().sorted(bySizeDifferent).forEach(System.out::println);
 
     }
 }
@@ -52,7 +52,7 @@ public class StreamCheck {
         return id + " - " + username + "-" + nickname + "-" + size + "-" + size2 + "-diff- " + diff + "- = " + getPercentage();
     }
 
-    int id,percentage;Float size, size2;
+    int id;float size, size2;
 
 
      public float getPercentage() {
