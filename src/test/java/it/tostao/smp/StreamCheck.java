@@ -37,7 +37,7 @@ public class StreamCheck {
         List<User> sortedUsers = users.stream().sorted(
                 byName.thenComparing(byId).thenComparing(byNickname).thenComparing(bySizeDifferent)).collect(
                 Collectors.toList());
-        users.stream().sorted(byName.thenComparing(byId)).forEach(System.out::println);
+        users.stream().sorted(byName.thenComparing(byId)).forEachOrdered(System.out::println);
 
     }
 }
