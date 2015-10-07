@@ -1,4 +1,4 @@
-package it.tostao.smp;
+package it.tostao.j8ia;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

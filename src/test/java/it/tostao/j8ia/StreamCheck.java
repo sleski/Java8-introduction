@@ -1,4 +1,4 @@
-package it.tostao.smp;
+package it.tostao.j8ia;
 
 import org.junit.Test;
 
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Created by Slawomir Leski <slawomir.leski@buschgroup.com> on 01.07.2015.
+ * Created by Slawomir Leski <slawomir.leski@sleski.com> on 01.07.2015.
  */
 public class StreamCheck {
 

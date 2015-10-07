@@ -1,4 +1,4 @@
-package it.tostao.smp;
+package it.tostao.j8ia;
 
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;

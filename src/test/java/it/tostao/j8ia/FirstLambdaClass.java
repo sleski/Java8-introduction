@@ -1,4 +1,4 @@
-package it.tostao.smp;
+package it.tostao.j8ia;
 
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -9,7 +9,7 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * Created by Slawomir Leski <slawomir.leski@buschgroup.com> on 17.06.2015.
+ * Created by Slawomir Leski <slawomir.leski@gmail.com> on 17.06.2015.
  */
 public class FirstLambdaClass {
 
